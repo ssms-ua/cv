@@ -31,7 +31,7 @@
 				<p class="h3 h-bd text-uppercase xs-hidden">Контактні дані</p>
 				<a href="tel:+380954730200" class="tel"><i class="fa fa-phone fa-fw"></i>&nbsp;&nbsp;+38 095 473 0 200</a>
 				<a href="mailto:oleksandr.butor@gmail.com" class="email"><i class="fa fa-envelope fa-fw"></i>&nbsp;&nbsp;Oleksandr.Butor@gmail.com</a>
-				<a href="http://www.butorol.pp.ua/" title="website" rel="nofollow"><i class="fa fa-fw fa-globe"></i>&nbsp;&nbsp;butorol.pp.ua</a>
+				<a href="https://www.butorol.pp.ua/" title="website" rel="nofollow"><i class="fa fa-fw fa-globe"></i>&nbsp;&nbsp;butorol.pp.ua</a>
 			</div>
 		</header> 
 		<main>
@@ -41,10 +41,10 @@
 				<div class="skills">
 					<p class="h3">Ключові компетенції</p>
 					<ul>
-						<li>Управління маркетинговими комунікаціями</li>
 						<li>Розробка маркетингових стратегій</li>
 						<li>Маркетингова аналітика</li>
-						<li>Управління лояльнісю</li>
+						<li>Управління маркетинговими комунікаціями</li>
+						<li>Управління лояльністю</li>
 					</ul>
 				</div>
 				<div class="languages">
@@ -104,13 +104,13 @@
 				<div class="techskills">
 					<p class="h3">Технічні навики</p>
 					<dl class="inline">
+						<dd><i class="fa fa-fw fa-cogs"></i></dd><dt>Google Analytics</dt>
+					</dl>
+					<dl class="inline">
+						<dd><i class="fa fa-fw fa-cogs"></i></dd><dt>Google Tag Manager</dt>
+					</dl>
+					<dl class="inline">
 						<dd><i class="fa fa-fw fa-cogs"></i></dd><dt>API</dt>
-					</dl>
-					<dl class="inline">
-						<dd><i class="fa fa-fw fa-file-code-o"></i></dd><dt>PHP, JavaScript</dt>
-					</dl>
-					<dl class="inline">
-						<dd><i class="fa fa-fw fa-wordpress"></i></dd><dt>Wordpress Developer</dt>
 					</dl>
 					<dl class="inline">
 						<dd><i class="fa fa-fw fa-file-excel-o"></i><i class="fa fa-fw fa-file-word-o"></i><i class="fa fa-fw fa-file-powerpoint-o"></i><i class="fa fa-fw fa-envelope-o"></i></dd><dt>Microsoft Office</dt>
@@ -130,7 +130,7 @@
 						<dt><i class="fa fa-fw fa-car"></i> Хюндай на Липинського (автоцентр), 2012 - 2012</dt>
 						<dt><i class="fa fa-fw fa-car"></i> Тойота Центр Львів "Діамант", 2009 - 2011</dt>
 						<dt><i class="fa fa-fw fa-lightbulb-o"></i> DeLius Illumination, 2008 - 2009</dt>
-						<dt><i class="fa fa-fw fa-black-tie"></i> Фаворит (рекламна агенція), 2006 - 2008</dt>
+						<dt><i class="fa fa-fw fa-black-tie"></i> Рекламна агенція "Фаворит", 2006 - 2008</dt>
 						<dt><i class="fa fa-fw fa-black-tie"></i> Керівник відділу агітації та пропаганди Обласного виборчого штабу Партії зелених України, 2005 - 2006</dt>
 					</dl>
 				</div>
@@ -256,14 +256,16 @@
 					</section>
 				</div>
 				<div class="dev-skills">
+
 					<section class="strong-skills">
 						<p class="h4">Впевнені навики:</p>
 						<ul>
 							<li>Custom post types</li>
 							<li>Post types relationships</li>
-							<li>Custom fields & Metaboxes</li>
+							<!-- <li>Custom fields & Metaboxes</li> -->
 							<li>Custom post templates</li>
 							<li>WP_Query</li>
+							<li>Wordpress perfomance</li>
 							<li>Woocommerce customization</li>
 						</ul>
 					</section>
@@ -271,21 +273,12 @@
 					<section class="regular-skills">
 						<p class="h4">Досвід:</p>
 						<ul>
-							<li>OpenAI Batch API</li>
-							<li>Git versioning</li>
-							<li>Wordpress perfomance</li>
-							<li>JavaScript</li>
 							<li><small>PHP / MySQL</small></li>
+							<li>JavaScript</li>
+							<li>Git version control</li>
 						</ul>
 					</section>
 
-					<section class="basic-skills">
-						<p class="h4">Початкові навики:</p>
-						<ul>
-							<li>Налаштування Google Tag Manager</li>
-							<li>Налаштування Google Analytics</li>
-						</ul>
-					</section>
 				</div>
 			</section>
 
@@ -293,31 +286,6 @@
 	</div>
 
 	<script src="js/jquery.min.js"></script>
-	<script>
-		$(document).ready(() => {
-			const sections = {
-				dvlp: '#development',
-				mrkt: '#marketing'
-			};
-
-			$('#development').hide();
-
-			$('#dvlp, #mrkt').on('click', function () {
-				const btnId = this.id;
-				const targetSection = sections[btnId];
-				const otherSection = btnId === 'dvlp' ? sections.mrkt : sections.dvlp;
-
-				$(otherSection).slideUp('fast');
-				$(targetSection).delay(350).slideDown('slow');
-
-				$('#dvlp, #mrkt').removeClass('active');
-				$(this).addClass('active');
-			});
-		});
-
-	</script>
+	<script src="js/main.js"></script>
 </body>
-
 </html>
-
-
